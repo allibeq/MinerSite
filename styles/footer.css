@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  margin: 0 auto;
+}
+.footerUp {
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.footerlogo {
+  font-size: 36px;
+  line-height: 80px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #2f80ed;
+  margin-top: 168.64px;
+  margin-left: 40px;
+}
+.footerMenu {
+  margin-left: 42px;
+  display: flex;
+  flex-direction: column;
+  width: 173px;
+  height: 48px;
+  margin-top: 187.64px;
+  margin-right: 814px;
+}
+.footerMenu div:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.equipmentFooter {
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+  color: #333333;
+  margin-bottom: 4px;
+}
+.aboutUsFooter {
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+  color: #333333;
+}
+.phoneNumber {
+  width: 250px;
+  height: 70px;
+  margin-top: 167.64px;
+  display: flex;
+  margin-right: 81px;
+  flex-direction: column;
+}
+.phoneNumberFooter {
+  font-size: 24px;
+  height: 40px;
+  letter-spacing: -0.015em;
+  color: #000000;
+  font-weight: 700;
+}
+.textUnderPhone {
+  height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.015em;
+  color: #959595;
+  text-align: end;
+  margin-top: -5px;
+}
+.band {
+  margin-top: 11.06px;
+  width: 1360px;
+  height: 0.94px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-left: 40px;
+}
+.footerDown {
+  width: 1440px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+}
+.inc {
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.015em;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 28px;
+  margin-left: 40px;
+  margin-right: 910px;
+  margin-bottom: 26.37px;
+}
+.face {
+  width: 50px;
+  height: 59.6px;
+  margin-bottom: 18.4px;
+  margin-right: 18px;
+}
+.youtube {
+  width: 43.9px;
+  height: 50px;
+  margin-bottom: 23.63px;
+  margin-right: 18.1px;
+}
+.whats {
+  width: 50px;
+  height: 58.41px;
+  margin-bottom: 18.59px;
+}
+.linkSocialMedia img:hover {
+  cursor: pointer;
+}

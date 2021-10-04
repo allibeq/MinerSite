@@ -1,0 +1,131 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+.topMiners {
+  height: 1109px;
+  width: 1440px;
+  margin: 0 auto;
+}
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 204px;
+  margin-left: 138px;
+}
+.blueRectangle {
+  width: 24.3px;
+  height: 76.54px;
+  background-color: #2f80ed;
+}
+.textTopMiners p {
+  margin-left: 25px;
+  font-weight: 700;
+  font-size: 48px;
+  color: #000000;
+}
+.textTopMiners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.minerBlocks {
+  display: flex;
+  flex-direction: row;
+  row-gap: 103px;
+  margin-top: 150px;
+  margin-left: 143px;
+  margin-right: 139px;
+}
+div.miner:first-child {
+  margin-right: 95px;
+}
+div.miner:last-child {
+  margin-left: 103px;
+}
+.miner {
+  width: 320px;
+  height: 480px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.37);
+}
+.minerImg {
+  width: 260px;
+  height: 172.85px;
+  margin: 30px 27px 0 33px;
+}
+.textUnderImg {
+  width: 260px;
+  height: 40px;
+  margin-left: 33px;
+  margin-right: 27px;
+}
+.antminer {
+  font-weight: 700;
+  font-size: 24px;
+  justify-content: center;
+}
+.minerDescription {
+  margin: 8px 27px 0 33px;
+}
+div.minerDescription p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #343434;
+  letter-spacing: -0.015em;
+}
+div.minerDescription p span {
+  font-weight: 700;
+}
+.linkUnderImg {
+  margin: 8px 27px 0 33px;
+}
+.linkUnderImg a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.015em;
+  color: #2f80ed;
+}
+.buttonMiner {
+  width: 260px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #2f80ed;
+  margin: 16.6px 27px 0 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonMiner a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  letter-spacing: -0.015em;
+}
+.buttonShowMore {
+  width: 1164px;
+  height: 56px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.71);
+  box-shadow: 0px 6px 15px rgba(130, 172, 235, 0.37);
+  margin: 100px 137px 0 139px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonShowMore:hover {
+  cursor: pointer;
+}
+.buttonShowMore a {
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.015em;
+  color: #2f80ed;
+}
