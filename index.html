@@ -242,28 +242,35 @@
             <div class="formTitle">
               <p>Заполните форму и вскоре мы с вами свяжемся</p>
             </div>
+            <form id="inputForm">
             <div class="formInputsName">
               <input type="text" name="name" id="name" placeholder="Имя" />
+              
               <input
                 type="text"
-                name="name"
+                name="surname"
                 id="surname"
                 placeholder="Фамилия"
               /></div>
               <input
-                type="email"
+               
                 name="email"
                 id="email"
                 placeholder="Email"
-                class="email"
+                class="email requiredElem"
               />
-              <input class="phone" name="phone" id="phone" placeholder="Номер телефона" />
-              <div class="buttonSubmit">
+              <label class="errorLabel" for="email">Проверьте введенный email!</label>
+            
+              <input class="phone requiredElem" name="phone" id="phone" placeholder="Номер телефона" />
+              <label class="errorLabel" for="name">Проверьте введенный телефон!</label>
+            
+              <button type="submit" id='buttonSubmit' class="buttonSubmit">
                 <a href="">Отправить</a>
-              </div>
+              </button>
               <div class="textUnderButton">
                 <p>*Если вы начинающий предприниматель и у Вас не достаточно средств, мы поможем в оформлении кредита на выгодных условиях.</p>
               </div>
+            </form>
             </div>
             
           </div>
