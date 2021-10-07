@@ -61,11 +61,7 @@ function sendMail(params) {
     to_email: email.value,
   };
 
-  emailjs
-    .send("service_ebl2heo", "template_7vuitvi", tempParams)
-    .then(function (res) {
-      console.log("success", res.status);
-    });
+  emailjs.send("service_ebl2heo", "template_7vuitvi", tempParams);
 }
 
 //ставит по дефолту всем класс ошибки, проверяет на правильность заполнения формы
@@ -141,8 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const myPhoneNumber = "79156368594";
 
     if (passes === 2) {
-      console.log("passed");
-
       //отправляет сообщение на мой номер через сервис https://sms.ru
       if (phone.value) {
         let response = await fetch(
@@ -150,13 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         if (response.ok) {
           let result = await response.json();
-          console.log(result.message);
+
           form.reset();
-        } else console.log("dont work");
+        }
       }
 
       if (email.value) {
-        console.log("works");
         sendMail();
       }
     }
