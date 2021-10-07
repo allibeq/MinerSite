@@ -3,14 +3,14 @@
 let collapsible = document.getElementsByClassName("collapseLabel");
 const phone = document.getElementById("phone");
 const email = document.getElementById("email");
-
+let nameOfPerson = document.getElementById("name");
+let surnameOfPerson = document.getElementById("surname");
 let formButton = document.getElementById("buttonSubmit");
 
-//цикл меняющий стили выпадающих q&a на сайте
-//меняют положение треугольника, меняют стили скнопки на которую нажимают
+//цикл, меняющий стили выпадающих q&a на сайте
+//меняют положение треугольника, меняют стили кнопки, на которую нажимают
 for (let i = 0; i < collapsible.length; i++) {
   collapsible[i].addEventListener("click", function () {
-    // this.classList.toggle("active");
     let content = this.nextElementSibling;
     if (content.style.display === "flex") {
       this.classList.remove("changeLabelColor");
@@ -44,16 +44,32 @@ function emailValidate(email) {
   return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(email.value);
 }
 
-//^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$
 function phoneValidate(phone) {
   return /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(
     phone.value
   );
 }
+
+//принимает параметры template в tempParams с сайта www.emailjs.com, определяющие контент письма
+//отправляет дефолтной функцией send с параметрами (id_service, id_template, ну и объект)
+//id_service, id_template указаны в кабинете на сайте www.emailjs.com
+function sendMail(params) {
+  let tempParams = {
+    to_name: `${nameOfPerson.value} ${surnameOfPerson.value}`,
+    from_name: "Xi - Miners",
+    message: "Спасибо за обращение! С вами скоро свяжутся!",
+    to_email: email.value,
+  };
+
+  emailjs
+    .send("service_ebl2heo", "template_7vuitvi", tempParams)
+    .then(function (res) {
+      console.log("success", res.status);
+    });
+}
+
 //ставит по дефолту всем класс ошибки, проверяет на правильность заполнения формы
-
 //если форма заполнена правильно убирает класс ошибки, если где-то заполнено неправильно, то оставит класс ошибки на том элементе, где ошибка
-
 //возвращает passes, он должен быть равен 2 при правильном заполнении полей, если меньше 2, то ошибка
 
 function validateInput(form) {
@@ -120,8 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
   async function sendForm(e) {
     e.preventDefault();
 
-    let formData = new FormData(form);
-
     let passes = validateInput(form);
     const message = "Спасибо. Скоро свяжемся!";
     const myPhoneNumber = "79156368594";
@@ -139,6 +153,11 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log(result.message);
           form.reset();
         } else console.log("dont work");
+      }
+
+      if (email.value) {
+        console.log("works");
+        sendMail();
       }
     }
   }
